@@ -13,20 +13,24 @@ public class Programa {
 
         for (int i = 0; i <= 4; i++)
         {
-            System.out.printf("Digite o primeiro número do vetor A:  ");
+            System.out.printf("Digite o número %d° do vetor A:\t", (i+1));
             A[i] = ler.nextInt();
-
-            System.out.printf("Digite o segundo número do vetor B:  ");
+        }
+        System.out.println("\n");
+        for (int i = 0; i <= 4; i++)
+        {
+            System.out.printf("Digite o número %d° do vetor B:\t", (i+1));
             B[i] = ler.nextInt();
-
+        }
+        for (int i = 0; i <= 4; i++)
+        {
             C[i] = A[i] + B[i];
+            total += C[i];
 
-            System.out.printf("\nA soma do número %d do vetor A, com o número %d do vetor B é: %d\n\n", A[i], B[i], C[i]);
-
-            total = total + C[i];
+            System.out.printf("\nNúmero %d do vetor A mais o número %d do vetor B é: %d", A[i], B[i], C[i]);
         }
 
-        System.out.println("Resultado total dos 5 números A com os 5 números B: " + total);
+        System.out.println("\n\nO valor da soma total dos 5 números de A com os 5 números de B é: " + total);
 
         ler.close();
     }
